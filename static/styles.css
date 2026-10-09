@@ -1,0 +1,71 @@
+/* Street Jam marketing site. Palette from the game: cream, ink, yellow, coral, blue, green. */
+@font-face{font-family:"Fredoka";font-weight:600;font-display:swap;src:url(fonts/Fredoka-SemiBold.ttf) format("truetype")}
+@font-face{font-family:"Fredoka";font-weight:700;font-display:swap;src:url(fonts/Fredoka-Bold.ttf) format("truetype")}
+:root{--cream:#FFF5E4;--cream2:#FFE9C2;--ink:#151A2D;--ink2:#3A4160;--yellow:#FFC928;--coral:#E8402F;--blue:#1479C9;--green:#1F8A3D;
+--card:#fff;--radius:22px;--shadow:0 6px 0 var(--ink);--head:"Fredoka","Trebuchet MS",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:4px solid var(--blue);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;z-index:100}
+.skip:focus{left:8px}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+h3{font-size:1.3rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,245,228,.95);backdrop-filter:blur(6px);border-bottom:3px solid var(--ink)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.brand img{height:44px;width:auto}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{font-family:var(--head);font-weight:600;color:var(--ink);text-decoration:none;padding:8px 14px;border-radius:999px}
+.nav a:hover,.nav a[aria-current=page]{background:var(--yellow)}
+.hero{padding:44px 0 28px;background:radial-gradient(circle at 80% 10%,var(--cream2),transparent 60%)}
+.hero .wrap{display:grid;gap:32px;align-items:center}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.05fr .95fr}}
+.lead{font-size:1.2rem;color:var(--ink2);max-width:34em}
+.actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:24px 0 8px}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--ink);background:var(--yellow);border:3px solid var(--ink);border-radius:999px;padding:12px 26px;box-shadow:0 4px 0 var(--ink)}
+.btn:hover{background:#FFD65A;color:var(--ink)}
+.btn.alt{background:#fff}
+.soon{display:inline-block;font-family:var(--head);font-weight:700;border:3px dashed var(--ink2);border-radius:999px;padding:11px 24px;color:var(--ink2);background:rgba(255,255,255,.6)}
+.fine{font-size:.9rem;color:var(--ink2)}
+.phones{display:flex;gap:14px;justify-content:center;align-items:flex-start}
+.phones figure:nth-child(2){margin-top:34px}
+figure{margin:0}
+.shot{border:4px solid var(--ink);border-radius:26px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.shot img{width:100%}
+figcaption{font-size:.9rem;color:var(--ink2);margin-top:12px;text-align:center}
+section{padding:40px 0}
+section.wrap{padding:44px 20px}
+.band{background:#fff;border-block:3px solid var(--ink)}
+.vehicles{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:3px solid var(--ink);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card .art{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;background:var(--cream);border-radius:16px}
+.card .art img{max-height:104px;width:auto}
+.card p{margin:.3em 0 0}
+.split{display:grid;gap:28px;align-items:center}
+@media(min-width:820px){.split{grid-template-columns:1fr 1fr}.split.rev>:first-child{order:2}}
+.pair{display:flex;gap:14px;justify-content:center}
+.pair>.shot{flex:1 1 0;min-width:0;max-width:230px}
+.gallery{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 18px;scroll-snap-type:x proximity}
+.gallery:focus-visible{outline-offset:6px}
+.gallery figure{flex:0 0 min(62vw,240px);scroll-snap-align:start}
+.faq details{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:14px 18px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-family:var(--head);font-weight:600;font-size:1.15rem}
+.faq p{margin:.6em 0 0}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:s;background:#fff;border:3px solid var(--ink);border-radius:var(--radius);padding:16px 18px 16px 70px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:12px;width:40px;height:40px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;font:700 1.2rem var(--head)}
+.prose{max-width:760px}
+.prose h2{margin-top:1.6em}
+.notice{background:#FFF0B8;border:3px solid var(--ink);border-radius:16px;padding:14px 18px;margin:0 0 24px}
+.site-footer{background:var(--ink);color:#fff;padding:32px 0;margin-top:24px}
+.site-footer a{color:#FFD65A}
+.site-footer .wrap{display:grid;gap:12px}
+.site-footer nav{display:flex;gap:18px;flex-wrap:wrap}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:560px){.phones figure:nth-child(2){margin-top:20px}.btn{width:100%;text-align:center}}
