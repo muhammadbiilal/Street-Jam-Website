@@ -6,7 +6,7 @@
   "developerName": "Muhammad Bilal",
   "policyDate": "10 October 2026",
   "_note_audience": "Play Families/target-audience answer, one or two sentences, e.g. who the app is for and that it does not knowingly collect data from children. Required before the policy stops showing \"Draft\".",
-  "audienceStatement": null,
+  "audienceStatement": "Street Jam is a puzzle game for everyone, including children. It has no accounts, chat, purchases or links to social media, and it does not knowingly collect personal information from children. When ads are offered, they are requested as child-directed, limited to content rated G and never personalised. If you believe a child's information has been collected, contact us and it will be deleted.",
   "_note_ads": "null = ads-off build (default). Set to \"live\" only for a build made with STREET_JAM_ADS=live and owner ad ids.",
   "ads": null
 }
