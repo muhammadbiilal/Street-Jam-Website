@@ -5,7 +5,7 @@
 --card:#fff;--radius:22px;--shadow:0 6px 0 var(--ink);--head:"Fredoka","Trebuchet MS",system-ui,sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink)}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font:1.0625rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink)}
 img{max-width:100%;height:auto;display:block}
 a{color:var(--blue);text-underline-offset:3px}
 a:hover{color:var(--ink)}
@@ -59,7 +59,7 @@ section.wrap{padding:44px 20px}
 .faq p{margin:.6em 0 0}
 .steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:14px}
 .steps li{counter-increment:s;background:#fff;border:3px solid var(--ink);border-radius:var(--radius);padding:16px 18px 16px 70px;position:relative}
-.steps li::before{content:counter(s);position:absolute;left:16px;top:12px;width:40px;height:40px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;font:700 1.2rem var(--head)}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);box-sizing:border-box;width:40px;height:40px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink);display:grid;place-items:center;font:700 1.2rem/1 var(--head);text-box:trim-both cap alphabetic}
 .prose{max-width:760px}
 .prose h2{margin-top:1.6em}
 .notice{background:#FFF0B8;border:3px solid var(--ink);border-radius:16px;padding:14px 18px;margin:0 0 24px}
@@ -69,3 +69,5 @@ section.wrap{padding:44px 20px}
 .site-footer nav{display:flex;gap:18px;flex-wrap:wrap}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:560px){.phones figure:nth-child(2){margin-top:20px}.btn{width:100%;text-align:center}}
+main{flex:1 0 auto}
+.site-footer .fine{color:#C9CDD8}
