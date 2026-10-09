@@ -182,9 +182,9 @@ def page(slug, body, hero=''):
     who = esc(dev) if dev else 'Street Jam'
     contact = ('<a href="mailto:%s">%s</a>' % (esc(email), esc(email))) if email else '<a href="/support/">Support</a>'
     foot = ('<footer class="site-footer"><div class="wrap"><nav aria-label="Footer">%s</nav>'
-            '<p>Street Jam is a traffic puzzle for Android. Contact: %s.</p>'
-            '<p class="fine">&copy; %s. Google Play is a trademark of Google LLC.</p></div></footer>' % (
-                ''.join('<a href="%s">%s</a>' % (h, esc(n)) for h, n, _ in NAV[1:]), contact, who))
+            '<p>Street Jam is a traffic puzzle for Android.</p>'
+            '<p class="fine">&copy; %s &middot; %s</p></div></footer>' % (
+                ''.join('<a href="%s">%s</a>' % (h, esc(n)) for h, n, _ in NAV[1:]), who, contact))
     return ('<!doctype html><html lang="en"><head>%s</head><body><a class="skip" href="#main">Skip to content</a>%s'
             '%s<main id="main">%s</main>%s</body></html>' % (head_tags(slug), header, hero, body, foot))
 
