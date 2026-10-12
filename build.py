@@ -113,7 +113,7 @@ if ads_live:
         'crash-reporting SDK of its own.</p>')
     OFFLINE_NOTE = ('Optional rewarded ads for cosmetic skins need an internet connection when they are available; '
                     'the campaign itself does not.')
-    SKIN_TEXT = ('Some vehicle skins can be unlocked by watching an optional rewarded ad, when one is available. They only '
+    SKIN_TEXT = ('Some vehicle skins can be unlocked by watching two optional rewarded ads, when ads are available. They only '
                  'change how vehicles look. Levels, hints and undo never depend on ads.')
 else:
     ADS_FAQ = ('The current build has no ads. Optional rewarded ads for cosmetic skins may be offered in a later version; '
