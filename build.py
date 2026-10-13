@@ -102,8 +102,11 @@ if ads_live:
                'unlock cosmetic vehicle skins that you choose in the garage. Levels, undo, restart and hints never need an ad.')
     ADS_PRIVACY = (
         '<h2>Advertising</h2><p>The app can show optional rewarded ads through the Google Mobile Ads SDK (Google AdMob). '
+        'An ad plays only when you choose to watch one in the garage to unlock a cosmetic vehicle skin (two ads per skin). '
+        'There are no banner, interstitial or app-open ads. Ads are requested as child-directed, limited to content rated '
+        'G and never personalised, and the app does not request the advertising ID permission. '
         'Game progress, settings and unlocked skins stay on your device. When an ad is requested, Google may collect and '
-        'use your IP address, device and advertising identifiers, ad interactions and diagnostics to serve and measure ads, '
+        'use your IP address, device information, ad interactions and diagnostics to serve and measure ads, '
         'prevent fraud and keep its services secure. Where the law requires it, the app asks for your ad privacy choices '
         'through Google\'s User Messaging Platform, and you can review them again from the garage ("Ad privacy options") '
         'where offered. Declining ads never limits levels, hints or undo. Learn more in Google\'s '
