@@ -171,6 +171,8 @@ def head_tags(slug):
         if slug == 'index':
             ld = {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': 'Street Jam',
                   'applicationCategory': 'GameApplication', 'operatingSystem': 'Android', 'url': site + '/'}
+            if store:
+                ld['installUrl'] = store
             t.append('<script type="application/ld+json">%s</script>' % json.dumps(ld))
     else:
         t.append('<meta name="robots" content="noindex,nofollow">')
